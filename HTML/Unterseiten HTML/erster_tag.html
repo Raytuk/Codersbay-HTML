@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erster Tag</title>
+</head>
+<body>
+    <h1><strong><em>CodersBay 1. Tag</em></strong></h1>
+    <img src="../Bilder/CODERS_BAY-LOGO-300x300.webp" alt="https://imgs.search.brave.com/F--zDC33pfpvnU63qewWxI0tIi5MOmyXB32iZGxJNu0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZXUtc3RhcnR1cHMu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIzLzA2L0NvZGVy/c0JheS0xNTB4MTUw/LmpwZw" height="100" width="auto">
+    <br>
+    <br>
+    <a href="../index.html">Zurück zum Index</a>
+    <br>
+    <div>
+        <h2><u>Immer nur einen Header h1 benutzen</u></h2>
+        <p>Dies ist innerhalb eines &ltdiv&gt Elements</p>
+        <br>
+        <p>Mittels des Tags &ltsub&gt kann man Text <sub>tief</sub> stellen.<br>
+            Mittels des Tags &ltsup&gt kann man Text <sup>hoch</sup> stellen.<br>
+            Mittels dem Attribut "style" kann man dem Text unter anderem <span style="color: blueviolet">Farbe</span> oder <span style="font-family: 'Comic Sans MS'">Stil</span> oder <span style="font-size: large">Größe</span> geben.<br>
+            Um ein einzelnes Wort im Paragraph zu stylen kann man das Tag &ltspan&gt oder &ltmark&gt (für Screenreader) nutzen.<hr>
+            Für einen horizontalen Break nutzt man &lthr&gt nutzen.
+        </p>
+        <pre>
+            Der Tag &ltpre&gt stellt den Text formatiert da wie im SourceCode.
+
+            Mit allen       Umbrüchen und Zeilenabständen.
+        </pre>
+        <h2><u>Tabellen</u></h2>
+        <p>
+            Um einen Tabelle darzustellen nutzt man den Tag &lttable&gt in kombi mit &lttr&gt für die jeweilige Spalte, &ltth&gt für die Header Zeile und &lttd&gt für die restlichen Zeilen.
+        </p>
+        <table border="1">
+            <thead>
+                <tr name="Zeilen Titel">
+                    <th>Reihe 1</th>
+                    <th>Reihe 2</th>
+                    <th>Reihe 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr name="Zeile 1">
+                    <td>Wert 1</td>
+                    <td>Wert 2</td>
+                    <td>Wert 3</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <pre>
+            Für einen besseren Syntax schachtelt man das am besten in thead (Table-header) bzw. tbody (Table-body). Der Syntax würde dann so aussehen:
+            <hr>
+            &lttable&gt
+                &ltthead&gt
+                    &lttr&gt
+                        &ltth&gt1.Header&lt/th&gt
+                        &ltth&gt2.Header&lt/th&gt
+                        &ltth&gt3.Header&lt/th&gt
+                    &lt/tr&gt
+                &lt/thead&gt
+                &lttbody&gt
+                    &lttr&gt
+                        &lttd&gt1.Zeile&lt/td&gt
+                        &lttd&gt2.Zeile&lt/td&gt
+                        &lttd&gt3.Zeile&lt/td&gt
+                    &lt/tr&gt
+                &lt/tbody&gt
+            &lt/table&gt
+            <hr>
+        </pre>
+        <h2><u>Listen</u></h2>
+        <p>
+            Mittels &ltul&gt kann man eine ungeordnete Liste erstellen, mittels &ltol&gt eine geordnete.<br>
+            Die einzelnen Elemente werden mit dem Tag &ltli&gt gekennzeichnet.
+        </p>
+        <h3>Geordnete Liste</h3>
+        <ol>
+            <li>Element</li>
+            <li>Element</li>
+            <li>Element</li>
+        </ol>
+        <hr>
+        <h3>Ungeordnete Liste</h3>
+        <ul>
+            <li>Element</li>
+            <li>Element</li>
+            <li>Element</li>
+        </ul>
+        <hr>
+    </div>
+</body>
+</html>

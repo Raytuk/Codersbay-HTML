@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+h4 {
+    color: orange;
+    background-color: blue;
+}
+header {
+    background-color: lightslategray;
+}
+body {
+    background-color: lightgray;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+#section_list{
+    margin-left: 150px;
+    margin-bottom: 100px;
+}
+.section_element {
+    color: black;
+}
+.right {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+.center{
+    text-align: center;
+}

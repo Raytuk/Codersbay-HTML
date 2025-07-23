@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zweiter Tag</title>
+    <style>
+        h3 {
+            color: blue;
+            background-color: pink;
+            font-family: sans-serif;
+            font-size: 10pt;
+            font-style: italic;
+        }
+        #id-selector{
+            font-family: Alef;
+            color: darkgreen;
+        }
+        #id-selector2{
+            font-family: Alef;
+            color: darkgreen;
+        }
+        main > * > p {
+            color: red;
+        }
+        .class-selector{
+            background-color: red;
+        }
+        #id-border{
+            border: 3px solid red;
+        }
+        .class-border{
+            border: 2px solid pink;
+            color: lime;
+            background-color: gray;
+        }
+        table td:first-child {
+            color: darkred;
+        }
+        table {
+            background-color: lightgray;
+        }
+        table tr:nth-child(even) {
+            background-color: gray;
+        }
+    </style>
+    <link rel="stylesheet" href="../Styles/styles.css">
+</head>
+<body>
+    <h1><strong><em>CodersBay 2. Tag</em></strong></h1>
+    <img src="../Bilder/CODERS_BAY-LOGO-300x300.webp" alt="https://imgs.search.brave.com/F--zDC33pfpvnU63qewWxI0tIi5MOmyXB32iZGxJNu0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZXUtc3RhcnR1cHMu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIzLzA2L0NvZGVy/c0JheS0xNTB4MTUw/LmpwZw" height="100" width="auto">
+    <br>
+    <br>
+    <a href="../index.html">Zurück zum Index</a>
+    <br>
+    <h2><u>Formulare</u></h2>
+    <br>
+    <form action="login-php" method="get">
+        <input type="text" id="tf-username" name="tf-username" placeholder="Username einfügen">
+        <label for="tf-username">Username</label>
+        <br>
+        <input form="tf-username" type="password" id="tf-password" name="tf-password" minlength="5" maxlength="12" placeholder="Passwort einfügen">
+        <label for="tf-password">Password</label>
+        <br>
+        <input type="email" id="tf-email" name="tf-email" minlength="5" maxlength="50" placeholder="EMail einfügen" required>
+        <label for="tf-email">EMail</label>
+        <br>
+        <input type="number" id="tf-schuhgröße" name="tf-schuhgröße" placeholder="Schuhgröße für Tarantino" required>
+        <label for="tf-schuhgröße">Schuhgröße</label>
+        <br>
+        <p>Geschlecht auswählen:</p>
+        <input type="radio" id="tf-male" name="tf-gender" value="male">
+        <label for="tf-male">Male</label>
+        <input type="radio" id="tf-female" name="tf-gender" value="female">
+        <label for="tf-female">Female</label>
+        <input type="radio" id="tf-other" name="tf-gender" value="other">
+        <label for="tf-other">Other</label>
+        <br>
+        <p><label for="kurse">Kurs auswählen:</label></p>
+        <select id="kurse" name="kurse">
+            <option value="">-- Kurs auswählen --</option>
+            <option value="SW1">Software 101</option>
+            <option value="SW2">Software 102</option>
+            <option value="NWT">Netzwerktechnik</option>
+        </select>
+
+        <br>
+        <br>
+        <label for="tf-msg">Nenne alle Kommastellen von &#960</label>
+        <br>
+        <textarea rows="4" cols="50" name="message" id="tf-msg"></textarea>
+        <br>
+        <input type="checkbox" id="tf-checkbox" name="tf-checkbox" required>
+        <label for="tf-checkbox">Hiermit verkaufe ich meine Seele an Codersbay</label>
+        <br>
+        <input type="reset" id="tf-reset" name="tf-reset" value="Reset">
+        <input type="submit" value="Login">
+    </form>
+    <br>
+<!--Bis hier wurde alles nur im HTML gestyled, ab hier wird CSS verwendet-->
+    <hr>
+    <br>
+    <h2 style="color: lime; background-color: black; display: inline; font-family: 'Comic Sans MS'">CSS Inline styling</h2>
+    <pre>Wird in der HTML Line des jeweiligen Elements geschrieben, als Attribute style:
+
+            &lth2 style="color: lime; background-color: black; font-family: 'Comic Sans MS'"&gtCSS Inline styling&lt/h2&gt
+    </pre>
+    <h3>CSS Internal styling</h3>
+    <pre>Wird im Head Bereich festgelegt:
+
+        &lthead&gt
+            &ltstyle&gt
+                h3 {
+                    color: blue;
+                    background-color: pink;
+                    font-family: sans-serif;
+                    font-size: 10pt;
+                    font-style: italic;
+                    }
+            &lt/style&gt
+        &lt/head&gt
+    </pre>
+    <h4>CSS External styling</h4>
+    <pre>Wird in einer separaten CSS Datei angegeben die mittels eines &ltlink&gt Element im Header verlinked wird:
+
+        &ltlink rel="stylesheet" href="../Styles/styles.css"&gt
+    </pre>
+    <h3>Varianten von Selektoren und deren verhalten untereinander</h3>
+    <div>
+        <pre id="id-selector">Hier ist ein Beispiel eines ID Selektors welcher im CSS Code mittels eines # als Präfix angesteuert wird. In diesem Fall:
+                                id="id-selector"
+
+                                #id-selector{
+                                    font-family: Alef;
+                                    color: darkgreen;
+                                }
+        </pre>
+        <br>
+        <pre class="class-selector">Hier ist ein Beispiel eines Class Selektors welcher im CSS Code mittels eines . als Präfix angesteuert wird. In diesem Fall:
+                                class="class-selector"
+
+                                .class-selector{
+                                    background-color: red;
+                                }
+        </pre>
+        <br>
+        <pre class="class-selector" id="id-selector2">Beide Selektoren können frei kombiniert werden. Man kann sowohl einem Element mehrere Selektoren geben, als auch Selektoren spezifizieren wie pre.class-selector.
+        In diesem Fall wurde dem &ltpre&gt Element sowohl der ID als auch Class Selektor gegeben. Man kann auch mittels eines Abstands eine Beziehung zwischen den auszuwählenden Elementen darstellen.
+        div p würde alle p Elemente innerhalb von divs ansteuern.
+        div > p würde alle p Elemente ansteuern die direkte Nachfahren von einem div Element sind.
+        div > * > p würde die zweite Generation p ansteuern.
+        div ~ p würde Nachbaren ansteuern.
+        </pre>
+        <br>
+        <pre id="id-border" class="class-border">Der Hierachie nach werden Selektoren anders gewichtet. Die Base ist ID > Class > Element. Die Style-Regelungen die mit einander clashen würden, werden nach Spezifizität ausgewählt.
+            In diesem Fall wurde ein ID und Class Selektor gegeben:
+
+            #id-border{
+                border: 3px solid red;
+            }
+            .class-border{
+                border: 2px solid pink;
+                color: lime;
+                background-color: gray;
+            }
+        </pre>
+    </div>
+    <main>
+        <div>
+            <p>Test ob man Enkelkinder von Elementen über ihre Beziehung ansteuern kann</p>
+
+        </div>
+        <p>
+            Das ist ein Kind.
+        </p>
+    </main>
+    <br>
+    <p>Es können auch n-generation Elemente spezifisch ausgewählt werden mittels z.B.: td:first-child oder tr:nth-child(even)</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Custamizable</th>
+                <th>Bewertung</th>
+            </tr>
+            <tr>
+                <td>Atom</td>
+                <td>Nein</td>
+                <td>nicht gut</td>
+            </tr>
+            <tr>
+                <td>Sublime</td>
+                <td>Naja</td>
+                <td>geht besser</td>
+            </tr>
+            <tr>
+                <td>VS Code</td>
+                <td>Ja</td>
+                <td>besser geht es nicht</td>
+            </tr>
+            <tr>
+                <td>Webstorm</td>
+                <td>Ja</td>
+                <td>passt scho</td>
+            </tr>
+        </thead>
+    </table>
+</body>
+</html>
